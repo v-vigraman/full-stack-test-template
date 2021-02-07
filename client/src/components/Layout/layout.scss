@@ -1,0 +1,74 @@
+
+$white-color: #fff;
+$full-width: 100%;
+$orange-color: #f5893c;
+$grey-color: grey;
+
+
+.wholeWrapper{
+    width: $full-width;
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+}
+.wrapper {
+    @extend .flex-box;
+    width:30%;
+    height: 100%;
+    background-color: $white-color;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: end;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+%flex-column{
+    display: flex;
+    flex-direction: column;
+}
+%box-shadow{
+    -webkit-box-shadow: 0 8px 20px #777;
+    -moz-box-shadow: 0 8px 20px #777;
+    box-shadow: 0 8px 20px #777;
+}
+.boxModel {
+    @extend %flex-column;
+    @extend %box-shadow;
+    max-width: 360px;
+    width: 80%;
+    height: 360px;
+    overflow: auto;
+    margin: 30px 30px;
+    background-color: $white-color;
+    padding: 12px 20px;
+    box-sizing: border-box;
+	ol {
+		list-style-type: none;
+	}
+    li {
+        padding: 8px;
+    }
+}
+
+.orangeButton {
+    padding: 10px 30px;
+    background-color: transparent;
+	border: 3px solid $orange-color;
+	color: $orange-color;
+    border-radius: 40px;
+}
+.flex-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input[type="number"] {
+    padding: 10px 10px;
+    width: 40px;
+    outline: none;
+    border-radius: 2px solid $grey-color;
+    margin: 20px 20px;
+}
+
